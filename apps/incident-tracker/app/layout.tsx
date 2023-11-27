@@ -12,7 +12,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <main className="flex flex-row w-full">
+          <aside className="fixed left-0 top-0 w-64 bg-slate-100 px-5 h-screen">
+            <div className="flex flex-col">
+              <h2>Side Bar</h2>
+            </div>
+          </aside>
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
